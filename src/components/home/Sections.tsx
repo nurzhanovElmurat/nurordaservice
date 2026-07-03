@@ -9,7 +9,7 @@ import { Card } from "@/components/ui/Card";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/AnimatedSection";
 import { images } from "@/lib/images";
-import { directions } from "@/data/directions";
+import { directions, getDirectionHref } from "@/data/directions";
 import { advantages } from "@/data/services";
 import { stats, whyChooseUs } from "@/data/company";
 
@@ -163,7 +163,7 @@ export function DirectionsPreview() {
               title={dir.title}
               description={dir.description}
               icon={dir.icon}
-              href="/directions"
+              href={getDirectionHref(dir)}
             />
           </StaggerItem>
         ))}

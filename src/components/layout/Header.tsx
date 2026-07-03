@@ -49,10 +49,10 @@ export function Header() {
       )}
     >
       <div className="container-corporate">
-        <div className="flex items-center justify-between gap-4">
-          <Logo variant={solid ? "dark" : "light"} />
+        <div className="flex items-center justify-between gap-3 xl:gap-4">
+          <Logo variant={solid ? "dark" : "light"} className="shrink-0" />
 
-          <nav className="hidden xl:flex items-center gap-0.5" aria-label="Основная навигация">
+          <nav className="hidden min-w-0 flex-1 xl:flex items-center justify-center gap-0.5" aria-label="Основная навигация">
             {navigation.map((item) => {
               const active = pathname === item.href || pathname.startsWith(item.href + "/");
               return (
@@ -85,18 +85,18 @@ export function Header() {
             })}
           </nav>
 
-          <div className="hidden lg:flex items-center gap-5">
+          <div className="hidden lg:flex shrink-0 items-center gap-4 xl:gap-5">
             <a
               href={`tel:${companyInfo.phone.replace(/\s|[()]/g, "")}`}
               className={cn(
-                "flex items-center gap-2 text-sm font-medium transition-colors duration-300",
+                "flex shrink-0 items-center gap-2 text-sm font-medium whitespace-nowrap transition-colors duration-300",
                 solid ? "text-navy hover:text-accent" : "text-white/90 hover:text-white"
               )}
             >
-              <Phone size={15} strokeWidth={1.5} aria-hidden="true" />
-              <span className="hidden 2xl:inline">{companyInfo.phone}</span>
+              <Phone size={15} strokeWidth={1.5} className="shrink-0" aria-hidden="true" />
+              <span className="hidden xl:inline whitespace-nowrap">{companyInfo.phone}</span>
             </a>
-            <Button href="/contacts" size="sm" variant={solid ? "primary" : "outline"}>
+            <Button href="/contacts" size="sm" variant={solid ? "primary" : "outline"} className="shrink-0">
               Консультация
             </Button>
           </div>
@@ -143,7 +143,7 @@ export function Header() {
           <div className="mt-auto space-y-4 pt-8">
             <a
               href={`tel:${companyInfo.phone.replace(/\s|[()]/g, "")}`}
-              className="flex items-center gap-2 text-white"
+              className="flex items-center gap-2 whitespace-nowrap text-white"
             >
               <Phone size={18} aria-hidden="true" />
               {companyInfo.phone}

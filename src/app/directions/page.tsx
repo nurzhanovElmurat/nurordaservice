@@ -5,7 +5,7 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/AnimatedSection";
 import { Card } from "@/components/ui/Card";
-import { directions } from "@/data/directions";
+import { directions, getDirectionHref } from "@/data/directions";
 
 export const metadata: Metadata = createMetadata({
   title: "Направления деятельности",
@@ -39,7 +39,7 @@ export default function DirectionsPage() {
                 title={dir.title}
                 description={dir.description}
                 icon={dir.icon}
-                href="/catalog"
+                href={getDirectionHref(dir)}
               />
             </StaggerItem>
           ))}

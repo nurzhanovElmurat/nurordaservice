@@ -178,7 +178,7 @@ export function ContactInfo() {
               </div>
               <div>
                 <span className="block text-xs text-graphite-light">Телефон</span>
-                <span className="font-semibold text-navy">{companyInfo.phone}</span>
+                <span className="font-semibold text-navy whitespace-nowrap">{companyInfo.phone}</span>
               </div>
             </a>
           </li>

@@ -103,10 +103,10 @@ export function Footer() {
               </h3>
               <ul className="space-y-4">
                 <li>
-                  <a
-                    href={`tel:${companyInfo.phone.replace(/\s|[()]/g, "")}`}
-                    className="flex items-start gap-3 text-sm text-white/60 transition-colors hover:text-accent"
-                  >
+                <a
+                  href={`tel:${companyInfo.phone.replace(/\s|[()]/g, "")}`}
+                  className="flex items-start gap-3 text-sm text-white/60 transition-colors hover:text-accent whitespace-nowrap"
+                >
                     <Phone size={16} className="mt-0.5 shrink-0" aria-hidden="true" />
                     {companyInfo.phone}
                   </a>
